@@ -1,0 +1,43 @@
+body {
+    overflow: visible;
+    font-weight: 300;
+}
+
+.sidebar-container {
+    min-height: 100vh;
+
+}
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.navbar-nav {
+    width: 20%;
+}
+
+.sidebar {
+    margin: 20px;
+}
+
+.sidebar-divider {
+    border-top: 1px solid #eaecf4;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.cuerpo {
+    float: right;
+}
+
+.bb {
+    float: left;
+    
+}
+
+.page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+}
