@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title><?php echo $response['title']; ?></title>
-
-    <!-- BOOTSTRAP AND CUSTOM CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="./assets/css/style.css" rel="stylesheet">
-
-</head>
 <body>
 
     <header>
         <div class="bb d-flex" id="wrapper">
             <!-- Sidebar -->
-            <div class="navbar-nav sidebar-container w-25 bg-primary">
+            <div class="navbar-nav sidebar-container fixed-top bg-primary">
                 <div class="sidebar">
                     <a class="logo text-light" href="/proyecto/index.php">                   
                         <h4><i class="fas fa-book"></i> Biblioteca </h4>
@@ -30,6 +16,7 @@
                         <div><a href="/biblioteca-publica-agustin-codazzi/solicitante/" class="d-block p-3 text-light nav-link"> <i class="fas fa-book-reader"></i> Solicitantes </a> </div>
                         <div> <a href="/proyecto/recursos.php" class="d-block p-3 text-light nav-link"> <i class="fas fa-folder"></i> Recursos </a></div>
                         <div><a href="#" class="d-block p-3 text-light nav-link"><i class="fas fa-user"></i> Usuarios </a></div>
+                        <div><a href="<?php echo $helpers->url('session', 'cerrar') ?>" class="d-block p-3 text-light nav-link"> Cerrar </a></div>
                     </div>
                 </div>
             </div>

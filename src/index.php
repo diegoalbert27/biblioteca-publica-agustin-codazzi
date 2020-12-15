@@ -8,11 +8,18 @@ require_once CORE_PATH . '/controller_base.php';
 //Funciones para el controlador frontal
 require_once CORE_PATH . '/function_control.php';
 
+session_start();
+
 //Cargamos controladores y acciones
-if (isset($_GET["controller"])) {
+if (isset($_SESSION['user_id'])) {
+    if (isset($_GET["controller"])) {
     $controllerObj = cargarControlador($_GET["controller"]);
     lanzarAccion($controllerObj);
+    } else {
+        $controllerObj = cargarControlador('solicitante');
+        lanzarAccion($controllerObj);
+    }
 } else {
-    $controllerObj = cargarControlador('solicitante');
+    $controllerObj = cargarControlador('session');
     lanzarAccion($controllerObj);
 }

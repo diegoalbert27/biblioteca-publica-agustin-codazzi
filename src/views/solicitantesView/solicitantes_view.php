@@ -1,5 +1,6 @@
 <?php
 
+  include_once 'views/partials/head.php';
   include_once 'views/partials/header.php';
 
   if(isset($_GET['action'])) {

@@ -20,5 +20,5 @@
         public function post() {}
         public function update() {}
         public function delete() {}
-        public function getByid() {}
+        public function getById() {}
     }

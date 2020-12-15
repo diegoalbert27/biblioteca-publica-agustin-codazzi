@@ -64,7 +64,7 @@
                 <div class="row mb-3">
                     <div class="col-md-10">
                         <select name="ocupacion" class="form-control" id="ocupacion">
-                            <option value="<?php echo $clave['nomOcup'] ?>"><?php echo $clave['nomOcup'] ?></option>
+                            <option value="<?php echo $clave['idOcup'] ?>"><?php echo $clave['nomOcup'] ?></option>
                             <?php foreach ($resultOcup as $claveOcup) : ?>
                                 <?php if ($claveOcup['nom_ocup'] === $clave['nomOcup']) unset($claveOcup) ?>
                                 <?php if (isset($claveOcup)) : ?>
@@ -77,7 +77,7 @@
                 <div class="row mb-3">
                     <div class="col-md-7">
                         <select name="institucion" class="form-control" id="ocupacion">
-                            <option value="<?php echo $clave['nomInst'] ?>"><?php echo $clave['nomInst'] ?></option>
+                            <option value="<?php echo $clave['idInst'] ?>"><?php echo $clave['nomInst'] ?></option>
                             <?php foreach ($resultInst as $claveInst): ?>
                                 <?php if ($claveInst['nom_inst'] === $clave['nomInst']) unset($claveInst) ?>
                                 <?php if (isset($claveInst)) : ?>

@@ -21,7 +21,7 @@
                 $allsolicitante = $solicitante->getById();
                 $this->view('solicitantesView/solicitantes', array(
                     '$allsolicitante' => $allsolicitante,
-                    'title' => 'Ver Solicitante'
+                    'title' => 'Informacion'
                 ));
             }
         }
@@ -36,7 +36,7 @@
             $this->view('solicitantesView/solicitantes', array(
                 '$allInstituciones' => $allInstituciones,
                 '$allOcupacion' => $allOcupacion,
-                'title' => 'Registro'
+                'title' => 'Registrar'
             ));
         }
 
@@ -53,7 +53,7 @@
                 '$allInstituciones' => $allInstituciones,
                 '$allOcupacion' => $allOcupacion,
                 '$allsolicitante' => $allsolicitante,
-                'title' => 'Modificar'
+                'title' => 'Cambiar Datos'
             ));
         }
 
