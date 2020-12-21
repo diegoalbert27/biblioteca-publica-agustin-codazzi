@@ -1,7 +1,5 @@
 <?php
 
-    require_once 'core/db_abstract.php';
-
     class depFunc extends dbAbstractModel {
 
         private $table;

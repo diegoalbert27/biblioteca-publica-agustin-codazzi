@@ -2,7 +2,7 @@
 
 function cargarControlador ($controlador) {
     $controlador = 'controller' . ucwords($controlador);
-    $strFileController = 'controllers/' . $controlador . '.php';
+    $strFileController = CONTROLLER_PATH . '/' . $controlador . '.php';
 
     require_once $strFileController;
     $controladorObj = new $controlador;

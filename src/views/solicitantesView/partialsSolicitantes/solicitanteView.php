@@ -61,7 +61,7 @@
       </div>
 
 
-      <div class="btn-group">
+      <div class="btn-group mb-3">
         <a href="<?php echo $helpers->url('solicitante', 'form'); ?>" class="d-none d-inline-block btn btn-primary shadow-sm"> Añadir Nuevo Solicitante</a>
       </div>
 

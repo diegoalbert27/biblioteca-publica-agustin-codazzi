@@ -1,8 +1,10 @@
 <?php
 
+    require_once 'config/realpath.php';
+
     abstract class dbAbstractModel {
 
-        private static $host, $user, $passwd; 
+        private static $host, $user, $passwd, $charset; 
         
         protected $db, $query;
         protected $rows = array();
@@ -17,12 +19,14 @@
 
         public function __construct () {
 
-            $config_database = require_once 'config/config_database.php';
+            $config_database = require_once CONFIG_PATH . '/config_database.php';
         
             self::$host = $config_database['host'] ?? 'localhost';
             self::$user = $config_database['user'] ?? 'root';
             self::$passwd = $config_database['passwd'] ?? '';
             
+            self::$charset = $config_database['utf8'] ?? 'utf8';
+
             $this->db = $config_database['db'] ?? 'biblioteca-publica-agustin-codazzi';
         }
 
@@ -34,6 +38,8 @@
                 echo 'Error al conectar a la base de datos ' . $this->conn->connect_errno;
                 echo ' Not found ' . $this->conn->connect_error;
             }
+            
+            $this->conn->set_charset(self::$charset);
         }
 
         protected function close_connection_db () {
@@ -54,7 +60,7 @@
             if (!$stmt->execute()) {
                 echo $stmt->error;
             } else {
-                echo 'si';
+                echo 'Se ha ejecutado una funcion';
             }
 
             $this->close_connection_db();

@@ -3,7 +3,7 @@
     class controllerBase {
 
         public function __construct() {
-            foreach (glob("models/*.php") as $file) {
+            foreach (glob(MODEL_PATH . '/*.php') as $file) {
                 require_once $file;
             }
         }

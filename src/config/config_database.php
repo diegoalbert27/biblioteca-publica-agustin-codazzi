@@ -4,5 +4,6 @@
         'host' => 'localhost',
         'user' => 'root',
         'passwd' => '',
-        'db' => 'biblioteca-publica-agustin-codazzi'
+        'db' => 'biblioteca-publica-agustin-codazzi',
+        'charset' => 'utf8'
     );
